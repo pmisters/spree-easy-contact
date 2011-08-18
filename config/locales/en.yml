@@ -20,3 +20,4 @@ en:
     new_topic: Add a topic
     from: from
     message_from: Message from
+    invalid_order_number: Invalid order number

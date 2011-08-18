@@ -5,13 +5,13 @@
 <%= hook :admin_topic_form, locals do %>
 
   <%= f.field_container :name do %>
-    <%= f.label :name, t("name") %> <span class="required">*</span><br />
+    <%= f.label :name, t("contacts.name") %> <span class="required">*</span><br />
     <%= f.text_field :name, :class => 'fullwidth title'  %>  
     <%= f.error_message_on :name %>
   <% end %>
 
   <%= f.field_container :email do %>
-    <%= f.label :email, t("emails") %> (<%= t('comma_delimited') %>) <span class="required">*</span><br />
+    <%= f.label :email, t("contacts.emails") %> (<%= t('contacts.comma_delimited') %>) <span class="required">*</span><br />
     <%= f.text_field :email, :class => 'fullwidth title'  %>  
     <%= f.error_message_on :email %>
   <% end %>

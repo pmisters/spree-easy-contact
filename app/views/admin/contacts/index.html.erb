@@ -1,12 +1,12 @@
-<h1><%= t("contacts")%></h1>
+<h1><%= t("contacts.contacts")%></h1>
 
 <table class="index">
   <tr>
     <%= hook :admin_contact_index_headers do %>
-      <th><%= t("name") %></th>
-      <th><%= t("email") %></th>
-      <th><%= t("topic") %></th>
-      <th><%= t("sent") %></th>
+      <th><%= t("contacts.name") %></th>
+      <th><%= t("contacts.email") %></th>
+      <th><%= t("contacts.topic") %></th>
+      <th><%= t("contacts.sent") %></th>
     <% end %>
     <th>
       <%= hook :admin_contact_index_header_actions %>

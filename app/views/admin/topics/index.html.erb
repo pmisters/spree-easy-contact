@@ -1,20 +1,20 @@
 <div class="toolbar">
   <ul class="actions">
     <li id="new_topic_link">
-      <%= button_link_to t("new_topic"), new_object_url, {:remote => true, :icon => "add"} %>
+      <%= button_link_to t("contacts.new_topic"), new_object_url, {:remote => true, :icon => "add"} %>
     </li>
   </ul>
   <br class="clear" />
 </div>
-<h1><%= t("topics") %></h1>
+<h1><%= t("contacts.topics") %></h1>
 
 <div id="new_topic"></div>
 
 <table class="index">
   <tr>
     <%= hook :admin_topic_index_header do %>
-    <th><%= t("name") %></th>
-    <th><%= t("email") %></th>
+    <th><%= t("contacts.name") %></th>
+    <th><%= t("contacts.email") %></th>
     <% end %>
     <th>
       <%= hook :admin_topic_index_header_actions %>

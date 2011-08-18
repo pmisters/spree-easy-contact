@@ -1,31 +1,31 @@
-<h1><%= "#{t('contacts')} #{t('from')} #{@contact.name}" %></h1>
+<h1><%= "#{t('contacts.contacts')} #{t('contacts.from')} #{@contact.name}" %></h1>
 
-<%= render :partial => 'admin/shared/contact_tabs', :locals => {:current => "Contact Details"} %>
+<%= render :partial => 'admin/shared/contact_tabs', :locals => {:current => t("contacts.contact_details")} %>
 
 <%= hook :admin_contact_show do %>
 <div class="adr">
-  <h4><%= t("name_and_mail") %></h4>
+  <h4><%= t("contacts.name_and_mail") %></h4>
   <p>
     <%= @contact.name %><br />
     <%= @contact.email %>
   </p>
 </div>
 <div class="adr">
-  <h4><%= t("topic") %></h4>
+  <h4><%= t("contacts.topic") %></h4>
   <p>
     <%= @contact.topic.name %>
   </p>
 </div>
 <% if @contact.order_number %>
 <div class="adr">
-  <h4><%= t("order_number") %></h4>
+  <h4><%= t("contacts.order_number") %></h4>
   <p>
     <%= @contact.order_number %>
   </p>
 </div>
 <% end %>
 <div class="adr">
-  <h4><%= t("message") %></h4>
+  <h4><%= t("contacts.message") %></h4>
   <p>
     <%= @contact.message %>
   </p>

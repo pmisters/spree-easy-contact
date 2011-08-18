@@ -1,14 +1,14 @@
 <% content_for :sidebar do %>
   <ul class="sidebar">
   <%= hook :admin_contact_tabs do %>
-    <li<%== ' class="active"' if current == 'Contact List' %>>
-      <%= link_to t("contact_list"), collection_url() %>
+    <li<%== ' class="active"' if current == t("contacts.contact_list") %>>
+      <%= link_to t("contacts.contact_list"), collection_url() %>
     </li>
-    <li<%== ' class="active"' if current == 'Contact Details' %>>
-      <%= link_to t("contact_details"), object_url(@contact) %>
+    <li<%== ' class="active"' if current == t("contacts.contact_details") %>>
+      <%= link_to t("contacts.contact_details"), object_url(@contact) %>
     </li>
-    <li<%== ' class="active"' if current == 'ContactResend' %>>
-      <%= link_to t("resend"), "#" %>
+    <li<%== ' class="active"' if current == t("contacts.resend") %>>
+      <%= link_to t("contacts.resend"), "#" %>
     </li>
   <% end %>
   </ul>

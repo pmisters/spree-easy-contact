@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency('spree_core', '>= 0.40.0')
   s.add_dependency('honeypot-captcha')
+  s.add_dependency('deface')
 end

@@ -8,16 +8,10 @@ Deface::Override.new(:virtual_path => "layouts/admin",
 
 class SpreeEasyContactHooks < Spree::ThemeSupport::HookListener
   insert_after :admin_tabs, :text => "<li><a href='/admin/contacts/'>Contacts</a></li>"
+  insert_after :admin_configurations_menu do
+    %(<tr>
+        <td><a href="/admin/topics/"><%= t("contacts.topics") %></a></td>
+        <td><%= t("contacts.topics_description") %></td>
+      </tr>)
+  end
 end
-
-# class SpreeEasyContactHooks < Spree::ThemeSupport::HookListener
-#   # custom hooks go here
-#   insert_after :admin_tabs do
-#     %(<%= tab(:contacts) %>)
-#   end
-#   
-#   insert_after :admin_configurations_menu do
-#     "<%= configurations_menu_item(I18n.t('topics'), admin_topics_path, I18n.t('topics_description')) %>"
-#   end
-#   
-# end
